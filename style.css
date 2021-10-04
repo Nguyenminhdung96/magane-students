@@ -33,6 +33,7 @@ body {
   height: 5rem;
   box-shadow: -5px -5px 5px #fff7, 5px 5px 5px #0002;
   border-radius: 5px;
+  border: none;
   padding: 0rem 1rem;
   margin: 0 auto;
   line-height: 5rem;
@@ -46,7 +47,7 @@ body {
 .box {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-start;
   padding: 3rem;
 }
 .box__title {
@@ -60,7 +61,7 @@ body {
 }
 .box__form {
   padding: 2rem;
-  width: calc(50% - 2rem);
+  width: calc(40% - 2rem);
   border-radius: 0.5rem;
   background-color: #d8d8d8;
   box-shadow: inset -5px -5px 5px #fff7, inset 5px 5px 5px #0002;
@@ -84,31 +85,27 @@ body {
   text-indent: 0.5rem;
 }
 .box__list {
-  width: calc(50% - 2rem);
+  width: calc(60% - 2rem);
   box-shadow: inset -5px -5px 5px #fff7, inset 5px 5px 5px #0002;
   padding: 2rem;
   background-color: #d8d8d8;
-}
-.box__list--table {
-  width: 100%;
-  max-height: 30rem;
-  border: 1px solid #fff;
-  border-radius: 5px;
   overflow-y: auto;
-  box-sizing: content-box;
-  text-align: center;
 }
-.box__list--table th {
-  color: black;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1rem;
-  background-color: #fff;
+.box__list--box {
+  width: 100%;
+  max-height: 35rem;
+  overflow-y: auto;
 }
 .box__list--table tr, .box__list--table td {
-  border: 1px solid #fff;
-  padding: 0.5rem;
+  border: 1px solid;
+  padding: 1rem;
+  vertical-align: middle;
+}
+.box__list--table tr:nth-child(even) {
+  background-color: blanchedalmond;
+}
+.box__list--table tr:first-child {
+  background-color: deeppink;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,90 +7,44 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body onload="renderListStudent()">
     <section class="box"> 
         <div class="box__form">
             <h2 class="box__title">
                 Enter student information</h2>
             <div class="box__form--name">
-                <span>full name</span><input type="text" placeholder="full name">
+                <span>full name</span><input id="name" type="text" placeholder="full name">
             </div>
             <div class="box__form--name box__form--email">
-                <span>Email</span><input type="email" placeholder="email">
+                <span>Email</span><input id="email" type="email" placeholder="email">
             </div>
             <div class="box__form--name box__form--phone">
-                <span>phone number </span><input type="text" placeholder="phonenumber">
+                <span>phone number </span><input id="phone" type="text" placeholder="phonenumber">
             </div>
             <div class="box__form--name box__form--adress">
-                <span>adress</span><input type="text" placeholder="adress">
+                <span>adress</span><input id="adress" type="text" placeholder="adress">
             </div>
             <div class="box__form--name box__form--gender">
                 <span>gender</span>
                 <input type="radio" name="gender" id="male" value="1"> male
                 <input type="radio" name="gender" id="female" value="0"> female
             </div>
-            <a href="#" class="btn">add to list</a>
+           <button class="btn" id="mode" onclick="save()">add student</button>
         </div>
         <div class="box__list">
             <h2 class="box__title">manage students </h2>
-            <table class="box__list--table">
-                <th colspan="6">student informa</th>
-                <tr>
-                    <td>#</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>phonenumber</td>
-                    <td>adress</td>
-                    <td>gender</td>
-                </tr>
-                <tr>
-                    <td>#</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>phonenumber</td>
-                    <td>adress</td>
-                    <td>gender</td>
-                </tr>
-                <tr>
-                    <td>#</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>phonenumber</td>
-                    <td>adress</td>
-                    <td>gender</td>
-                </tr>
-                <tr>
-                    <td>#</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>phonenumber</td>
-                    <td>adress</td>
-                    <td>gender</td>
-                </tr>
-                <tr>
-                    <td>#</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>phonenumber</td>
-                    <td>adress</td>
-                    <td>gender</td>
-                </tr>
-                <tr>
-                    <td>#</td>
-                    <td>name</td>
-                    <td>email</td>
-                    <td>phonenumber</td>
-                    <td>adress</td>
-                    <td>gender</td>
-                </tr>
-               
-            </table>
+            <div class="box__list--box">
+                <table class="box__list--table" id="table_list">
+            
+                </table>
+            </div>
         </div>
     </section>
 
 
 
 
-    <script src="./js/js.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 </body>
 </html>

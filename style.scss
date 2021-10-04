@@ -37,6 +37,7 @@ html {
   box-shadow: -5px -5px 5px #fff7,
                5px 5px 5px #0002 ;
   border-radius: 5px;
+  border: none;
   padding: 0rem 1rem;
   margin: 0 auto;
 
@@ -54,7 +55,7 @@ html {
 .box{
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
 
     padding: 3rem ;
 
@@ -74,7 +75,7 @@ html {
     &__form{
 
         padding: 2rem;
-        width: calc(50% - 2rem);
+        width: calc(40% - 2rem);
         border-radius: 0.5rem;
 
         background-color: rgb(216, 216, 216);
@@ -109,38 +110,36 @@ html {
         
     }
     &__list{
-      width: calc(50% - 2rem);
+      width: calc(60% - 2rem);
+      
       box-shadow: inset -5px -5px 5px #fff7,
       inset  5px 5px 5px #0002 ;
       padding: 2rem;
 
       background-color: rgb(216, 216, 216);
+
+      overflow-y: auto;
       
-      &--table{
+      &--box{
         width: 100%;
-        max-height: 30rem;
-        border: 1px solid #fff;
-        border-radius: 5px;
-
+        max-height: 35rem;
         overflow-y: auto;
-        box-sizing: content-box;
-
-        text-align: center;
-        & th{
-          color: black;
-          font-size: 1.8rem;
-          font-weight: bold;
-          text-transform: uppercase;
-
-          padding: 1rem;
-
-          background-color: #fff;
-        }
-        & tr, td{
-          border:  1px solid #fff;
-          padding: 0.5rem;
-        }
+      }
+      &--table{
         
+        & tr , td{
+          border: 1px solid;
+          padding: 1rem;
+          vertical-align: middle;
+        }
+        & tr{
+          &:nth-child(even){
+            background-color: blanchedalmond;
+          }
+          &:first-child{
+            background-color: deeppink;
+          }
+        }
       }
 
     }
